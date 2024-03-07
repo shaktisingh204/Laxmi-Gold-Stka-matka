@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".sfdghj.NewPassActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/backIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:onClick="backBtn"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataConText"
+        android:text="@string/you_are_not_connected_to_internet"
+        android:textColor="@color/black"
+        android:background="@color/warn_red"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:layout_below="@id/backIcon"
+        android:elevation="1dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="70dp"
+                app:cardBackgroundColor="@color/cardBackColor"
+                android:visibility="invisible"
+                app:cardCornerRadius="80dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="185dp"
+                    android:layout_height="186dp"
+                    android:layout_gravity="center"
+                    android:background="@color/backa1"
+                    android:src="@drawable/fojilogo" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginHorizontal="15dp"
+                android:text="@string/change_pass"
+                android:textColor="@color/textViewColor1"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/rounded_edittext_focused">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputNewPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:drawableStart="@drawable/ic_lock_icon_01"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/textViewColor1"
+                    android:hint="@string/enter_new_password"
+                    android:inputType="textPassword"
+                    android:maxLength="18"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textViewColor1"
+                    android:textColorHint="@color/textViewColor1"
+                    android:textCursorDrawable="@drawable/ic_cursor"
+                    android:textStyle="bold"
+                    tools:targetApi="m" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/pass_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:onClick="passToggle"
+                    android:src="@drawable/ic_baseline_visibility_24"
+                    android:tint="@color/btnTextColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/rounded_edittext_focused">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputConformPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:drawableStart="@drawable/ic_lock_icon_01"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/textViewColor1"
+                    android:hint="@string/conform_pass"
+                    android:inputType="textPassword"
+                    android:maxLength="18"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/textViewColor1"
+                    android:textColorHint="@color/textViewColor1"
+                    android:textCursorDrawable="@drawable/ic_cursor"
+                    android:textStyle="bold"
+                    tools:targetApi="m" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/passToggleEyeConf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="20dp"
+                    android:onClick="passToggleConf"
+                    android:src="@drawable/ic_baseline_visibility_24"
+                    android:tint="@color/btnTextColor" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:backgroundTint="@color/textViewColor1"
+                android:onClick="GoChangePassBtn"
+                android:paddingVertical="10dp"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="23dp"
+                tools:ignore="UsingOnClickInXml" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:indeterminateTint="@color/editTextColor"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

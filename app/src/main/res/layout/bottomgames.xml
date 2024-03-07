@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:background="@drawable/backdesignb"
+    android:layout_height="160dp">
+<LinearLayout
+    android:id="@+id/galigame"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:padding="8dp"
+    android:background="@drawable/blueline"
+    android:gravity="center_vertical|center_horizontal"
+    android:layout_weight="1">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/galigame" />
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="30dp"
+       android:text="GALI DS"
+       android:textColor="@color/white"
+       android:textSize="18sp"
+       android:layout_margin="10dp"
+       android:textStyle="bold"
+       android:background="@drawable/textviewback2"
+       android:gravity="center_horizontal|center_vertical"/>
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/starlinegame"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+        android:layout_margin="5dp"
+    android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/greenline"
+    android:gravity="center_vertical|center_horizontal"
+    android:layout_weight="1">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/starlinegame" />
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="30dp"
+       android:text="STARLINE"
+       android:textColor="@color/white"
+       android:textSize="18sp"
+       android:layout_margin="10dp"
+       android:textStyle="bold"
+       android:background="@drawable/textviewback"
+       android:gravity="center_horizontal|center_vertical"/>
+</LinearLayout>
+</LinearLayout>

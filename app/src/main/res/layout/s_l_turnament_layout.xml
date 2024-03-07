@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:elevation="0dp"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="10dp">
+    <RelativeLayout
+        android:id="@+id/mainline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+
+        android:background="@drawable/greenback"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/gameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.2"
+            android:textAllCaps="true"
+            android:textColor="@color/textViewColor1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/gameResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gameName"
+            android:layout_centerHorizontal="true"
+            android:letterSpacing="0.4"
+            android:textColor="@color/textViewColor1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/imagebac"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:background="@color/green"
+            android:gravity="center_horizontal|center_vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/gamePlay"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/nplay" />
+        </LinearLayout>
+
+       <!-- <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/gamePlay"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/nplay" />-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="5dp"
+            android:gravity="start"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/card_background"
+            android:layout_marginHorizontal="10dp"
+            android:paddingVertical="2dp">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/closeTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:text="10:30 AM"
+                android:textStyle="bold"
+                android:textColor="@color/textViewColor1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/marketOpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/card_background"
+                android:gravity="start"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="5dp"
+                android:text="Market closed for today"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

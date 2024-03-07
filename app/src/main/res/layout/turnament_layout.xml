@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="0dp"
+    android:layout_marginHorizontal="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="5dp">
+    <RelativeLayout
+        android:id="@+id/mainline"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingStart="8dp"
+        android:background="@drawable/greenback"
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="vertical"
+  >
+    <LinearLayout
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:id="@+id/sideline"
+        android:alpha="0.8"
+        android:visibility="invisible"
+        android:orientation="horizontal" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/aa"
+            android:layout_width="match_parent"
+            android:gravity="start"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@color/green"
+                android:id="@+id/chartback">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/chartTable"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/nchart"
+                android:padding="2dp"
+                android:scaleType="fitCenter"  />
+            </LinearLayout>
+
+            <com.romainpiel.shimmer.ShimmerTextView
+                android:id="@+id/eventType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:elevation="1dp"
+                android:gravity="start"
+                android:letterSpacing="0.1"
+                android:text="hello"
+                android:maxLines="1"
+                android:layout_marginStart="5dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:reflectionColor="#000000"
+                tools:ignore="RelativeOverlap" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/eventNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventType"
+                android:layout_marginTop="4dp"
+                android:letterSpacing="0.3"
+                android:text="124-56-123"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="@color/green"
+                android:id="@+id/imagebac">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/eventStatus"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/nplay"
+                android:padding="8dp"
+                android:scaleType="fitCenter" />
+            </LinearLayout>
+        </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="0dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/openlabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="Open: "
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/openingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@id/openlabel"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="Open: 10:30 AM"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aa"
+                android:layout_marginVertical="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical"
+                android:paddingVertical="2dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/closelabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/closingTime"
+                        android:drawablePadding="3dp"
+                        android:gravity="center"
+                        android:text="Close: "
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/closingTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="3dp"
+                        android:gravity="center"
+                        android:text="Close: 11:10 AM"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/marketOpen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/card_background"
+                    android:gravity="center"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="Market closed for today"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/card_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="2dp">
+
+
+        <ImageView
+            android:id="@+id/playic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/play1" />
+
+        <TextView
+            android:id="@+id/playtext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="Play"
+            android:gravity="center"
+            android:textColor="@color/textViewColor1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

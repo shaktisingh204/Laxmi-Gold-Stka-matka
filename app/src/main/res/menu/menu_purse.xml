@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".sfdghj.PurseActivity"
+    >
+    <item android:id="@+id/purse"
+        android:title="@string/vault"
+        android:icon="@drawable/nhwallet"
+        android:iconTint="#FFFFFF"
+        app:showAsAction="ifRoom"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/coins"
+        app:showAsAction="always"
+        android:visible="false" />
+</menu>

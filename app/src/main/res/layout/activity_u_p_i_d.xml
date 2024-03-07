@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+
+    tools:context=".sfdghj.UPIDActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/appbarLayout">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"                app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+                app:title="UPI Details"
+                app:titleTextColor="@color/btnTextColor"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                android:contentInsetStart="0dp"/>
+        </com.google.android.material.appbar.AppBarLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dataConText"
+            android:text="@string/you_are_not_connected_to_internet"
+            android:textColor="@color/white"
+            android:background="@color/warn_red"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:elevation="1dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="30dp"
+                android:layout_margin="1dp">
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_number"
+                    android:textStyle="bold"
+                    android:textColor="@color/textViewColor1"/>
+            <LinearLayout
+                android:id="@+id/layoutWithdrawPoints"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="5dp"
+                android:gravity="center_vertical"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/money"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="20dp"
+                    android:scaleType="fitCenter"
+                    android:background="@color/textViewColor1"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:src="@drawable/rupee"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/in_txt_upi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="@string/enter_mobile_number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/textViewColor1"
+                    android:textColorHint="@color/textViewColor1"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:textColor="@color/btnTextColor"
+                    android:text="@string/push"
+                    android:background="@drawable/card_background3"
+                    android:backgroundTint="#201d3a"
+                    android:layout_gravity="end"
+                    android:onClick="sUp"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

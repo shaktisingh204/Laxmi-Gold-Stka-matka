@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".sfdghj.DisawarActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:background="@color/transparent">
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:translationX="40dp"
+                android:src="@drawable/toolbarcenter" />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Desawar"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:translationX="-50dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/appbarLayout">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/tool_bar"
+                android:background="@drawable/toolbarbackimgnew"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+                app:titleTextColor="@color/btnTextColor"
+                app:contentInsetStartWithNavigation="0dp"/>
+        </com.google.android.material.appbar.AppBarLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/internet_text"
+        android:text="@string/you_are_not_connected_to_internet"
+        android:textColor="@color/white"
+        android:background="@color/warn_red"
+        android:padding="5dp"
+        android:elevation="1dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/priceback"
+        android:gravity="center"
+        android:paddingHorizontal="20dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/topText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/gali_disawar_game"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/leftD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topText"
+            android:text="@string/left_digit"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/left_d_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topText"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/right_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leftD"
+            android:layout_marginVertical="8dp"
+            android:text="@string/right_digit"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/right_d_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leftD"
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="8dp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/jodi_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/right_d"
+            android:text="@string/jodi_digit"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/jodi_d_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/right_d"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chartTableBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jodi_d"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:backgroundTint="@color/white"
+            android:background="@drawable/card_background3"
+            android:gravity="center"
+            android:paddingHorizontal="0dp"
+            android:text="@string/chart"
+            android:textStyle="bold"
+            android:textColor="@color/textViewColor1"
+            app:cornerRadius="0dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="8dp"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bHisBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            app:backgroundTint="@color/textViewColor1"
+            android:background="@drawable/card_background3"
+            android:text="@string/bid_his"
+            android:textColor="@color/btnTextColor"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/wHisBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            app:backgroundTint="@color/textViewColor1"
+            android:background="@drawable/card_background3"            android:text="@string/win_his"
+            android:textColor="@color/colorBtnTxt"
+            app:cornerRadius="5dp"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipe_ref_lyt">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recy_s_l"
+            tools:listitem="@layout/g_d_turnament_layout"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

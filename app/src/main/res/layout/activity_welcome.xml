@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:layout_height="match_parent"
+    tools:context=".sfdghj.WelcomeActivity"
+    android:background="@color/white">
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataConText"
+        android:text="@string/you_are_not_connected_to_internet"
+        android:textColor="@color/white"
+        android:background="@color/warn_red"
+        android:padding="5dp"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:elevation="1dp"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/fojilogo"
+        android:layout_centerVertical="true"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:text="@string/txt_welcome"
+        android:visibility="gone"
+        android:textColor="@color/textViewColor1"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:layout_margin="80dp"
+        android:indeterminateTint="@color/btnColor"
+        android:visibility="gone" />
+
+</RelativeLayout>
